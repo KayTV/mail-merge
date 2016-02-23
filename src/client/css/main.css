@@ -7,6 +7,10 @@ a {
   color: #00B7FF;
 }
 
+textarea[name = Emails] {
+  margin-top: 50px;
+}
+
 .results {
   border: 1px solid black;
   border-radius: 5px;

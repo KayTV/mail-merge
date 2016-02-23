@@ -10,7 +10,8 @@
       <h1>{{ title }}</h1>
     </header>
     <div class="col-xs-6">
-      <p>Enter In Name / Email (one per line)</p>
+      <p>Enter In Name / Email (one per line)</p><br>
+      <p><i>Ex: Joe,Some,body@email.com</i></p>
       <form method="post">
         <textarea rows="10" cols="50" required name="Emails"></textarea>
     </div>
@@ -21,8 +22,8 @@
         <li>{last}</li>
         <li>{email}</li>
       </ul>
-        <input type="text" maxlength="40" name="Subject"><br>
-        <textarea rows="10" cols="50" maxlength="150" name="Body"></textarea>
+        <input type="text" maxlength="40" name="Subject" placeholder="Subject"><br>
+        <textarea rows="10" cols="50" maxlength="150" name="Body" placeholder="Enter in body"></textarea>
         <button type="submit" class="btn btn-success" id="submit_form">Submit</button>
 
       </form>
