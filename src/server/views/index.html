@@ -6,10 +6,36 @@
 {% block content %}
 
   <div class="container">
+    <header>
+      <h1>{{ title }}</h1>
+    </header>
+    <div class="col-xs-6">
+      <p>Enter In Name / Email (one per line)</p>
+      <form method="post">
+        <textarea rows="10" cols="50" required name="Emails"></textarea>
+    </div>
+    <div class="col-xs-6">
+      <p>Enter the text. The following substitutions are valid:</p>
+      <ul>
+        <li>{first}</li>
+        <li>{last}</li>
+        <li>{email}</li>
+      </ul>
+        <input type="text" maxlength="40" name="Subject"><br>
+        <textarea rows="10" cols="50" maxlength="150" name="Body"></textarea>
+        <button type="submit" class="btn btn-success" id="submit_form">Submit</button>
 
-    <h1>{{ title }}</h1>
-    <p>Welcome to {{ title }}</p>
+      </form>
+    </div>
 
   </div>
+  {% for email in emails %}
+    <div class="row results">
+      <p>To: {{ email[0] }} {{ email[1] }} {{ email[2] }}</p>
+      <p>Subject: {{ subject }}</p>
+      <p> Hey {{ email[0] }}</p>
+      <p>{{ body }}</p>
+    </div>
+  {% endfor %}
 
 {% endblock %}
