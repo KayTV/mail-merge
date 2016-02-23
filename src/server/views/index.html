@@ -33,7 +33,7 @@
   {% for email in emails %}
     <div class="row results">
       <button type="submit" id="close_email"><i class="fa fa-times-circle fa-lg"></i></button>
-      <p>To: {{ email[0] }} {{ email[1] }} {{ email[2] }}</p>
+      <p>To: {{ email[0] }} {{ email[1] }} &#60;{{ email[2] }}&#62;</p>
       <p>Subject: {{ subject }}</p>
       <p> Hey {{ email[0] }}</p>
       <p>{{ body }}</p>
