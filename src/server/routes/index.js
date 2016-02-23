@@ -15,16 +15,17 @@ router.post('/', function(req, res, next){
   }
   console.log(splitEmail)
   var renderObj = {
-    // id: function() {
-    //   id + 1;
-    // },
+    id: 0,
     emails: splitEmail,
     body: body,
     subject: subject,
+    // changeId: function (){
+    //   emails.id + 1
+    // },
     title: 'Mail Merge'
   };
   console.log(renderObj);
-  
+  console.log(renderObj.changeId())
   res.render('index', renderObj);
 })
 
