@@ -25,7 +25,6 @@ router.post('/', function(req, res, next){
     title: 'Mail Merge'
   };
   console.log(renderObj);
-  // console.log(renderObj.changeId())
   res.render('index', renderObj);
 })
 
